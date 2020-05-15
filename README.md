@@ -11,6 +11,11 @@ This should be wrapped in a tf.py_function for real time evaluation at training 
 ```
   See: "example_usage.py" for more info.
 
+  "dataset_util.py" contains the main functions:
+      * save_wsi_thumbnail_mask()   - run this to create masks of the tissue regions
+      * get_random_wsi_patch()      - function for getting stochastic regions from WSIs
+                                      wrapped in a tf.py_function() for use in network
+
 ```
 
 ## Resources
@@ -21,10 +26,12 @@ Examples of this code in use are avalable:
 
 ## Requirements
 
+This code was developed using Ubuntu Linux, running tensorflow-gpu 1.15
+
 * Python
 * OpenSlide
 * OpenSlide-tools
-* Tensorflow
+* Tensorflow >= 1.14
 * OpenCV
 * Pandas
 * Skimage
