@@ -8,15 +8,14 @@ This code was created by [Brendon Lutnick](https://github.com/brendonlutnick)
 ## Useage
 
 This should be wrapped in a tf.py_function for real time evaluation at training time.
-```
-  See: "example_usage.py" for more info.
 
-  "dataset_util.py" contains the main functions:
-      * save_wsi_thumbnail_mask()   - run this to create masks of the tissue regions
-      * get_random_wsi_patch()      - function for getting stochastic regions from WSIs
-                                      wrapped in a tf.py_function() for use in network
+See: "example_usage.py" for more info.
 
-```
+"dataset_util.py" contains the main functions:
+* save_wsi_thumbnail_mask()   - run this to create masks of the tissue regions
+* get_random_wsi_patch()      - function for getting stochastic regions from WSIs
+                                wrapped in a tf.py_function() for use in network
+
 
 ## Resources
 
