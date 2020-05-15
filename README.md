@@ -1,5 +1,6 @@
 # tf-WSI-dataset-utils
-Input functions for training neural networks on WSI histology images using tf.dataset input pipelines to gather random WSI patches at runtime
+Input functions for training neural networks on WSI histology images using tf.dataset input pipelines to gather random WSI patches at runtime.
+
 This code was created by [Brendon Lutnick](https://github.com/brendonlutnick)
 
 **Abstract:**<br>
@@ -9,13 +10,12 @@ This code was created by [Brendon Lutnick](https://github.com/brendonlutnick)
 
 This should be wrapped in a tf.py_function for real time evaluation at training time.
 
-See: "example_usage.py" for more info.
-
 "dataset_util.py" contains the main functions:
 1. save_wsi_thumbnail_mask()  - run this to create masks of the tissue regions
 2. get_random_wsi_patch()     - function for getting stochastic regions from WSIs | wrapped in a tf.py_function() for use in network
 3. get_slide_label()          - an example of how to read slide labels from a master excel sheet
 
+See: "example_usage.py" for more info on the use of these functions.
 
 ## Resources
 
