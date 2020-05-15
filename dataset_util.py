@@ -11,6 +11,11 @@ from skimage.color import rgb2hsv,hsv2rgb,rgb2lab,lab2rgb
 from skimage import exposure
 
 def save_wsi_thumbnail_mask(filename):
+    '''
+    saves a low resolution png mask of the tissue location in a WSI
+
+    '''
+
     try: filename = filename.numpy()
     except: filename = filename
     wsi = openslide.OpenSlide(filename)
@@ -36,11 +41,11 @@ def save_wsi_thumbnail_mask(filename):
         mask_PIL = Image.fromarray(mask)
         mask_PIL.save(mask_path)
 
-
-def get_random_wsi_batch(filename, patch_size, augment=False, downsample=4):
+def get_random_wsi_patch(filename, patch_size=256, downsample=4, augment=False):
     '''
     takes a wsi and returns a random patch of patch_size
     downsample must be a multiple of 2
+    run save_wsi_thumbnail_mask() before using this function
 
     '''
     try: augment = augment.numpy()
@@ -153,8 +158,8 @@ def get_random_wsi_batch(filename, patch_size, augment=False, downsample=4):
                 except: pass
 
     region = get_random_patch(wsi, l_dims, level, mask, patch_size, filename, downsample, augment)
-    region_t = np.transpose(region, (2,0,1)) # [CWH]
-    return region_t
+    # region = np.transpose(region, (2,0,1)) # [CWH]
+    return region
 
 def get_slide_label(filename, data_label_xlsx):
     data_label_xlsx = str(data_label_xlsx.numpy())
