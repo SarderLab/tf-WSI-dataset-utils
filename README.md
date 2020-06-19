@@ -1,4 +1,4 @@
-# tf-WSI-dataset-utils
+# tf-WSI-dataset-utils (Histo-fetch)
 Input functions for training neural networks on WSI histology images using tf.dataset input pipelines to gather random WSI patches at runtime.
 
 This code was created by [Brendon Lutnick](https://github.com/brendonlutnick)
