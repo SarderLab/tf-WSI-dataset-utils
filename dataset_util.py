@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 from skimage.transform import PiecewiseAffineTransform, warp
 from skimage.color import rgb2hsv,hsv2rgb,rgb2lab,lab2rgb
 from skimage import exposure
-from xml_to_mask import xml_to_mask
 
 def save_wsi_thumbnail_mask(filename):
     '''
