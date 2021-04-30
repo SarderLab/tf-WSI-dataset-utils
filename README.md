@@ -3,6 +3,8 @@ Input functions for training neural networks on WSI histology images using tf.da
 
 This code was created by [Brendon Lutnick](https://github.com/brendonlutnick)
 
+An arXiv paper describing this method is [avalable](https://arxiv.org/abs/2102.11433)
+
 **Abstract:**<br>
 *We have created a custom input pipeline to efficiently extract random patches and labels from whole slide images (WSIs) for input to a neural network. We use a Tensorflow backend to prefetch these patches during network training, avoiding the need for WSI preparation such as WSI chopping prior to training.. This code is setup to randomly prefetch and augment patches from WSIs at training time efficiently on the CPU.*
 
